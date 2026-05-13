@@ -1,16 +1,38 @@
-# React + Vite
+📝 ToDo List App
+Une application de gestion de tâches performante et intuitive développée avec React et Vite. Ce projet a été conçu pour démontrer la maîtrise des fondamentaux de React, notamment la gestion d'état local et la décomposition en composants réutilisables.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Fonctionnalités
+Ajout de tâches : Création instantanée via un formulaire dédié.
 
-Currently, two official plugins are available:
+Validation : Empêche l'ajout de tâches vides.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Gestion d'état : Marquage des tâches comme "complétées" avec un retour visuel (barré).
 
-## React Compiler
+Suppression : Retrait définitif d'une tâche de la liste.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Identifiants uniques : Utilisation de crypto.randomUUID() pour une gestion précise des éléments du DOM.
 
-## Expanding the ESLint configuration
+🏗️ Architecture Technique
+Le projet suit une structure modulaire pour garantir la maintenabilité du code :
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+App.jsx : Composant parent gérant la "source de vérité" (le state global de la liste).
+
+TodoForm.jsx : Composant de saisie gérant son propre état local pour l'input.
+
+TodoList.jsx : Composant de structure chargé de mapper les données vers les items.
+
+TodoItem.jsx : Composant d'affichage gérant les interactions unitaires (clic, suppression).
+
+🛠️ Installation
+Accédez au dossier du projet :
+
+Bash
+cd 01-ToDoApp
+Installez les dépendances :
+
+Bash
+   npm install
+Lancez le serveur de développement :
+
+Bash
+npm run dev
